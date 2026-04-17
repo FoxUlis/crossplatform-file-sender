@@ -1,0 +1,32 @@
+# Compiled C++ files
+*.o
+*.out
+*.exe
+file_transfer
+*.dll
+*.so
+*.dylib
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.pytest_cache/
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build directories
+build/
+cmake-build-debug/
