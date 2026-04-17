@@ -35,7 +35,6 @@ A high-performance TCP file transfer application written in C++ with a Python-ba
 
 ### Prerequisites
 -   C++11 compatible compiler (GCC, Clang, or MSVC).
--   Python 3.6+ (for the TUI wrapper).
 
 ### Build from Source (Linux/macOS)
 
