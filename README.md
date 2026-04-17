@@ -63,4 +63,4 @@ Or simply open the project in Visual Studio.
 
 - Ensure port 4444 is open in your firewall if transferring over a network.
 - When testing locally, do not save the received file with the same name as the source file in the same directory to avoid data corruption. 
-
+- Python TUI is is development. tui_app.py not working on this moment
