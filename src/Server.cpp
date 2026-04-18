@@ -119,7 +119,7 @@ void Server::sendData(FileCopier& f){
    delete[] extension;
 
    //5. Send data chunks
-   uint32_t chunkSize = f.getChunkSize();
+   uint64_t chunkSize = f.getChunkSize();
    char* currentChunk = new char[chunkSize];
    
    uint64_t totalBytesSent = 0;
@@ -131,7 +131,7 @@ void Server::sendData(FileCopier& f){
    std::cout << "Sending data...\n";
 
    while (bytesLeft > 0) {
-       uint32_t toRead = (bytesLeft < chunkSize) ? bytesLeft : chunkSize;
+       uint64_t toRead = (bytesLeft < chunkSize) ? bytesLeft : chunkSize;
        f.readChunk(currentChunk, toRead);
        
        if (!sendAll(Socket, currentChunk, toRead)) {

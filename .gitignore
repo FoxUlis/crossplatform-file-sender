@@ -30,3 +30,27 @@ Thumbs.db
 # Build directories
 build/
 cmake-build-debug/
+*.iso
+NewFileTransfer/x64/Release/NewFileTransfer.tlog/NewFileTransfer.lastbuildstate
+NewFileTransfer/x64/Release/Server.obj
+NewFileTransfer/x64/Release/vc143.pdb
+x64/Release/NewFileTransfer.pdb
+NewFileTransfer/x64/Release/NewFileTransfer.tlog/link.write.1.tlog
+*.json
+*.ipch
+*.opendb
+*.db
+*.db-wal
+.vs/NewFileTransfer/FileContentIndex/d5ec1888-4bc3-4b66-8ebd-904a5cdcd1e5.vsidx
+.vs/NewFileTransfer/v17/.suo
+.vs/NewFileTransfer/v17/Browse.VC.db-shm
+NewFileTransfer.sln
+NewFileTransfer.vcxproj
+NewFileTransfer.vcxproj.filters
+NewFileTransfer.vcxproj.user
+*.tlog
+NewFileTransfer/x64/Release/FileCopier.obj
+NewFileTransfer/x64/Release/main.obj
+NewFileTransfer/x64/Release/NewFileTransfer.exe.recipe
+NewFileTransfer/x64/Release/NewFileTransfer.log
+NewFileTransfer/x64/Release/Client.obj
