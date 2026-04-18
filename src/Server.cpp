@@ -88,7 +88,7 @@ void Server::cleanup(){
 void Server::sendData(FileCopier& f){
    //1. Send file size (64-bit)
    uint64_t fileSize = f.getSize();
-   uint64_t netFileSize = htonl(fileSize);
+   uint64_t netFileSize = htonll(fileSize);
    
    std::cout << "Sending filesize... (" << fileSize << "bytes)...";
    if (!sendAll(Socket, (char*)&netFileSize, sizeof(netFileSize))) {

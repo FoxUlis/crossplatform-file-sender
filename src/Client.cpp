@@ -80,7 +80,7 @@ void Client::cleanup(){
    cleanup_networking();
 }
 
-uint32_t Client::getSizeInBytes(){
+uint64_t Client::getSizeInBytes(){
    return recSizeInBytes;
 }
 std::vector<char> Client::getExtension(){
@@ -94,7 +94,7 @@ void Client::receiveData(){
    if (!recvAll(Socket, (char*)&netFileSize, sizeof(netFileSize))) {
        std::cout << "Failed.\n"; return;
    }
-   uint64_t fileSize = ntohl(netFileSize);
+   uint64_t fileSize = ntohll(netFileSize);
    std::cout << "---> " << fileSize << " bytes\n";
 
    //2. Receive extension length (32-bit)

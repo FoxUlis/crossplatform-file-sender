@@ -15,7 +15,7 @@ private:
     // WSADATA убран отсюда, так как он нужен только внутри функции init_networking() в Network.h
     
     std::string newFileName;
-    uint32_t recSizeInBytes;
+    uint64_t recSizeInBytes;
     std::vector<char> eVec;
 
     int initWinsock();
@@ -27,7 +27,7 @@ public:
     Client();
     ~Client();
     void start();
-    uint32_t getSizeInBytes();
+    uint64_t getSizeInBytes();
     std::vector<char> getExtension();
 };
 
