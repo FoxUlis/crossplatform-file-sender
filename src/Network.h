@@ -1,10 +1,10 @@
 #ifndef NETWORK_H
 #define NETWORK_H
 
-#ifdef _WIN64
+#ifdef _WIN32
     #include <winsock2.h>
     #include <ws2tcpip.h>
-    #pragma comment(lib, "ws2_64.lib")
+    #pragma comment(lib, "ws2_32.lib")
     typedef SOCKET SocketType;
     #define INVALID_SOCKET_VAL INVALID_SOCKET
     #define SOCKET_ERROR_VAL SOCKET_ERROR
@@ -58,7 +58,7 @@ inline bool recvAll(SocketType sock, char* data, uint64_t length) {
     }
     return true;
 }
-
+/*
 inline uint64_t htonll(uint64_t value) {
 	const int one = 1;
 	const bool isLittleEndian = (*(const char*)&one == 1);
@@ -74,5 +74,5 @@ inline uint64_t htonll(uint64_t value) {
 inline uint64_t ntohll(uint64_t value) {
 	return htonll(value);
 }
-
+*/
 #endif

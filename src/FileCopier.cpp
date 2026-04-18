@@ -68,15 +68,15 @@ void FileCopier::doWork(){
    }
 
    char* buffer = new char[chunkSize];
-   uint32_t bytesLeft = fileSize;
+   uint64_t bytesLeft = fileSize;
    
    while(bytesLeft > 0) {
-       uint32_t toRead = (bytesLeft < chunkSize) ? bytesLeft : chunkSize;
+       uint64_t toRead = (bytesLeft < chunkSize) ? bytesLeft : chunkSize;
        iFile.read(buffer, toRead);
        std::streamsize bytesRead = iFile.gcount();
        if(bytesRead > 0) {
            oFile.write(buffer, bytesRead);
-           bytesLeft -= (uint32_t)bytesRead;
+           bytesLeft -= (uint64_t)bytesRead;
        } else {
            break;
        }
@@ -112,7 +112,7 @@ bool FileCopier::getOneChunk(){
    return oneChunk;
 }
 
-uint32_t FileCopier::getChunkSize(){
+uint64_t FileCopier::getChunkSize(){
    return chunkSize;
 }
 

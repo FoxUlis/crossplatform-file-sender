@@ -15,7 +15,7 @@ private:
     std::ifstream iFile;
     std::ofstream oFile;
     uint64_t fileSize;
-    uint32_t chunkSize;
+    uint64_t chunkSize;
     uint64_t numChunks;
     bool oneChunk;
 
@@ -36,7 +36,7 @@ public:
     
     uint64_t getNumChunks();
     bool getOneChunk();
-    uint32_t getChunkSize();
+    uint64_t getChunkSize();
 
     void readChunk(char* chunk, uint32_t sizeToRead);
     void writeChunk(char* chunk, uint32_t sizeToWrite);

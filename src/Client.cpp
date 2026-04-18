@@ -125,7 +125,7 @@ void Client::receiveData(){
 
    auto start = std::chrono::high_resolution_clock::now();
    uint64_t allBytesRec = 0;
-   uint32_t chunkSize = 1024 * 1024; //1MB
+   uint64_t chunkSize = 1024 * 1024; //1MB
    char* currentChunk = new char[chunkSize];
    
    uint64_t bytesLeft = fileSize;
@@ -133,7 +133,7 @@ void Client::receiveData(){
    std::cout << "Receiving data...\n";
 
    while (bytesLeft > 0) {
-       uint32_t toRead = (bytesLeft < chunkSize) ? bytesLeft : chunkSize;
+       uint64_t toRead = (bytesLeft < chunkSize) ? bytesLeft : chunkSize;
        
        if (!recvAll(Socket, currentChunk, toRead)) {
            std::cout << "Receive error.\n";
